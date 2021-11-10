@@ -103,7 +103,7 @@
 
 # version JB (@copyright 2021):
 
-composer install
+    composer install
 	composer create-project symfony/website-skeleton nomduprojet
 	
 	mv nomduprojet/* .
