@@ -1,5 +1,3 @@
-# Commandes-Symfony
-
 # Création avec composer :
 
     composer create-project symfony/skeleton nomduprojet
