@@ -1,33 +1,33 @@
 # Commandes-Symfony
 
-# Création avec composer :
+## Création avec composer :
 
     composer create-project symfony/skeleton nomduprojet
 
 
-# Démarrage du serveur PHP :
+## Démarrage du serveur PHP :
 
     cd nomduprojet
 
     php -S localhost:8080 -t public 
 
 
-# Router avec Annotation : 
+## Router avec Annotation : 
 
     composer require annotations
 
 
-# Création de la DB
+## Création de la DB
 
     php bin/console doctrine:database:create
 
     php bin/console doctrine:database:drop 
 
-# Mettre à jour la DB
+## Mettre à jour la DB
 
     php bin/console doctrine:schema:update --force
 
-## ou par migrations :
+### ou par migrations :
 
     bin/console make:migrations 
     
@@ -36,72 +36,72 @@
     bin/console doctrine:migrations:migrate
 
 
-# Création d'une entité
+## Création d'une entité
 
     php bin/console make:entity
 
 
-# Maker
+## Maker
 
     composer require --dev symfony/maker-bundle 
 
 
-# Création d'un controller (src/Controller)
+## Création d'un controller (src/Controller)
 
     php bin/console make:controller  
 
 
-# Twig
+## Twig
 
-## Twig bundle :
+### Twig bundle :
 
     composer require twig
 
-## Twig Asset (pour le css, les images, ...) : 
+### Twig Asset (pour le css, les images, ...) : 
 
     composer require symfony/asset
 
 
-# Fixtures :
+## Fixtures :
 
-## installer le bundle fixtures:
+### installer le bundle fixtures:
 
         composer require --dev orm-fixtures
 
-## pour charger les données:    
+### pour charger les données:    
 
          php bin/console doctrine:fixtures:load
 
          php bin/console doctrine:fixtures:load --append (charger sans écraser les données précédentes)
 
 
-# Faker
+## Faker
 
     composer require --dev fakerphp/faker
 
-# Créer form 
+## Créer form 
 
     bin/console make:form
 
 
-# Créer User 
+## Créer User 
 
     bin/console make:user
 
 
-# Créer un form de login
+## Créer un form de login
 
     bin/console make:auth
 
-# CRUD 
+## CRUD 
 
     bin/console make:crud
 
-# Voter   
+## Voter   
 
     bin/console make:voter
 
-## version JB :
+# version JB :
 
 php -S 0.0.0.0:8080 -t public
 
