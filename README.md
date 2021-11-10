@@ -101,42 +101,42 @@
 
     bin/console make:voter
 
-# version JB :
+# version JB (@copyright 2021):
 
-php -S 0.0.0.0:8080 -t public
-
-	Modify your DATABASE_URL config in .env
-
-	DATABASE_URL="mysql://explorateur:Ereul9Aeng@127.0.0.1:3306/oflix?serverVersion=mariadb-10.3.25"
-	
+composer install
 	composer create-project symfony/website-skeleton nomduprojet
-	mysql --version
-	php bin/console doctrine:database:create
-	php bin/console doctrine:database:drop
-	php bin/console make:entity
-	php bin/console make:migration
-	php bin/console doctrine:migrations:migrate
-	php bin/console doctrine:schema:update --force
-	explorateur / Ereul9Aeng
-	php bin/console make:crud
-	php bin/console make:form
-	php bin/console make:controller
-	
-	php bin/console sec:hash
-	
-	bin/console make:voter
-	
-	php bin/console doctrine:fixtures:load
-	php bin/console doctrine:fixtures:load --append
 	
 	mv nomduprojet/* .
 	mv nomduprojet/.env* .
 	mv nomduprojet/.gitignore* .
 	rm -rf nomduprojet/
 	
-	composer require --dev fakerphp/faker
-
+	Modify your DATABASE_URL config in .env
+	mysql --version
+	explorateur / Ereul9Aeng
+	DATABASE_URL="mysql://explorateur:Ereul9Aeng@127.0.0.1:3306/oflix?serverVersion=mariadb-10.3.25"
 	
-
-
-	form_themes: ['bootstrap_5_layout.html.twig']    
+	bin/console doctrine:database:create
+	bin/console doctrine:database:drop
+	
+	php bin/console doctrine:fixtures:load
+	php bin/console doctrine:fixtures:load --append
+		
+	composer require --dev fakerphp/faker
+	
+	bin/console make:controller
+	bin/console make:entity
+	bin/console make:crud
+	bin/console make:form
+	bin/console make:voter
+	bin/console make:user
+	bin/console make:auth
+	bin/console sec:hash
+	
+	
+	bin/console make:migration
+	bin/console doctrine:migrations:migrate
+	bin/console doctrine:schema:update --force
+	
+	config/package/twig.yaml :
+	form_themes: ['bootstrap_5_layout.html.twig']
