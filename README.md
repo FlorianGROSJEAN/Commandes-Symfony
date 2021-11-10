@@ -19,13 +19,15 @@
 
 # Création de la DB
 
-    php bin/console doctrine:database:create 
+    php bin/console doctrine:database:create
+
+    php bin/console doctrine:database:drop 
 
 # Mettre à jour la DB
 
     php bin/console doctrine:schema:update --force
 
-    ou par migrations :
+## ou par migrations :
 
     bin/console make:migrations 
     
@@ -51,23 +53,31 @@
 
 # Twig
 
-    Twig bundle : composer require twig
+## Twig bundle :
 
-    Twig Asset (pour le css, les images, ...) : composer require symfony/asset
+    composer require twig
+
+## Twig Asset (pour le css, les images, ...) : 
+
+    composer require symfony/asset
 
 
 # Fixtures :
 
-    -installer le bundle fixtures:
+## installer le bundle fixtures:
 
         composer require --dev orm-fixtures
 
-    -pour charger les données:    
+## pour charger les données:    
 
          php bin/console doctrine:fixtures:load
 
          php bin/console doctrine:fixtures:load --append (charger sans écraser les données précédentes)
 
+
+# Faker
+
+    composer require --dev fakerphp/faker
 
 # Créer form 
 
@@ -86,7 +96,10 @@
 # CRUD 
 
     bin/console make:crud
-    
+
+# Voter   
+
+    bin/console make:voter
 
 ## version JB :
 
