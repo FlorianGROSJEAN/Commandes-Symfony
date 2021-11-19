@@ -101,6 +101,46 @@
 
     bin/console make:voter
 
+## Command
+
+	bin/console make:command
+
+## Subscriber
+
+	bin/console make:subscriber
+
+
+## Api (sans templates)
+
+	bin/console make:controller --no-template
+
+	(puis Api\V1\NomduController)
+
+	Api platform:	composer req api
+
+
+## JWT lexik	
+
+	composer require lexik/jwt-authentication-bundle
+
+	bin/console lexik:jwt:generate-keypair
+
+	ou 
+
+	composer require lexik/jwt-authentication-bundle:2.10.x-dev
+
+	$ mkdir -p config/jwt
+	$ openssl genpkey -out config/jwt/private.pem -aes256 -algorithm rsa -pkeyopt rsa_keygen_bits:4096
+	$ openssl pkey -in config/jwt/private.pem -out config/jwt/public.pem -pubout
+
+
+## CORS
+
+	composer req nelmio/cors-bundle 
+
+
+
+
 # version JB (@copyright 2021):
 
     composer install
