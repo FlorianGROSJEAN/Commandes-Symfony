@@ -138,7 +138,17 @@
 
 	composer req nelmio/cors-bundle 
 
+## TEST
 
+	bin/console make:test
+
+	bin/console d:d:c --env=test
+
+	bin/console d:s:u --env=test --force
+
+	bin/console d:f:l --env=test
+
+	( bin/console d:f:l --env=test --group=NameFixtures --append  )
 
 
 # version JB (@copyright 2021):
