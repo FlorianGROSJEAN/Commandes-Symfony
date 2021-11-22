@@ -150,6 +150,8 @@
 
 	( bin/console d:f:l --env=test --group=NameFixtures --append  )
 
+	bin/phpunit
+
 
 # version JB (@copyright 2021):
 
